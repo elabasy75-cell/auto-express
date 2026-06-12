@@ -3,98 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>أوتو إكسبريس العباسي</title>
+  <title>أوتو إكسبريس العباسي - اختبار</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: Arial, sans-serif; background: #0a0a0a; color: white; }
-    .sidebar { width: 280px; background: #111; height: 100vh; position: fixed; padding: 20px; }
-    .logo img { width: 250px; display: block; margin: 0 auto 30px; border-radius: 12px; }
-    .nav a { 
-      display: block; 
-      padding: 16px 20px; 
-      color: #ddd; 
-      text-decoration: none; 
-      margin: 8px 0; 
-      border-radius: 8px; 
-      font-size: 1.1em;
-      cursor: pointer;
-    }
-    .nav a:hover, .nav a.active { background: #ffd700; color: black; font-weight: bold; }
-    .main { margin-right: 280px; padding: 30px; }
-    .card { background: #1a1a1a; padding: 25px; border-radius: 12px; margin-bottom: 25px; display: none; }
-    .card.active { display: block; }
-    h1, h2 { color: #ffd700; }
+    body { font-family: Arial; background: #0a0a0a; color: white; text-align: center; padding: 50px; }
+    h1 { color: #ffd700; }
+    .btn { background: #ffd700; color: black; padding: 15px 30px; font-size: 18px; border: none; border-radius: 10px; margin: 20px; cursor: pointer; }
   </style>
 </head>
 <body>
-
-  <div class="sidebar">
-    <div class="logo">
-      <img src="https://i.postimg.cc/bvPdwrc8/Whats-App-Image-2026-05-31-at-12-13-37-PM.jpg" alt="لوجو">
-    </div>
-    <div class="nav">
-      <a class="active" data-page="1">🏠 لوحة التحكم</a>
-      <a data-page="2">📦 إدارة المخزون</a>
-      <a data-page="3">📋 تاريخ الصيانة</a>
-      <a data-page="4">🔍 فحص السيارات</a>
-      <a data-page="5">🧾 الفواتير</a>
-    </div>
-  </div>
-
-  <div class="main">
-    <h1>أوتو إكسبريس العباسي</h1>
-
-    <div id="page1" class="card active">
-      <h2>لوحة التحكم الرئيسية</h2>
-      <p>عدد السيارات اليوم: <strong>14</strong></p>
-      <p>الإيرادات: <strong>22,450 جنيه</strong></p>
-    </div>
-
-    <div id="page2" class="card">
-      <h2>📦 إدارة المخزون</h2>
-      <p>نظام المخزون هنا...</p>
-    </div>
-
-    <div id="page3" class="card">
-      <h2>📋 تاريخ الصيانة</h2>
-      <p>سجل الصيانات...</p>
-    </div>
-
-    <div id="page4" class="card">
-      <h2>🔍 فحص السيارات</h2>
-      <p>Launch X431 جاهز...</p>
-    </div>
-
-    <div id="page5" class="card">
-      <h2>🧾 الفواتير</h2>
-      <p>إنشاء فاتورة...</p>
-    </div>
-  </div>
-
-  <script>
-    console.log("✅ JavaScript Loaded Successfully");
-
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', function() {
-        console.log("Clicked on page:", this.getAttribute('data-page'));
-        
-        // Remove active from all
-        document.querySelectorAll('.nav a').forEach(a => a.classList.remove('active'));
-        document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
-        
-        // Activate clicked
-        this.classList.add('active');
-        const pageNum = this.getAttribute('data-page');
-        const targetPage = document.getElementById('page' + pageNum);
-        if (targetPage) {
-          targetPage.classList.add('active');
-        } else {
-          console.error("Page not found:", pageNum);
-        }
-      });
-    });
-
-    console.log("✅ Event Listeners Attached");
-  </script>
+  <h1>أوتو إكسبريس العباسي</h1>
+  <img src="https://i.postimg.cc/bvPdwrc8/Whats-App-Image-2026-05-31-at-12-13-37-PM.jpg" width="300px"><br><br>
+  
+  <button class="btn" onclick="alert('✅ الجافا سكريبت شغال!')">اضغط هنا لو شغال</button>
+  
+  <p style="margin-top:50px; color:#ffd700;">لو ظهرت الرسالة → يبقى الجافا سكريبت شغال</p>
 </body>
 </html>
